@@ -20,6 +20,6 @@ class Donation {
     }
 }
 
-Donation.keys = ["id", "name", "location", "age", "verified", "anonymous", "bank_account", "profile_pic", "situation"]
+Donation.keys = ["id", "cause_id", "sender", "receiver_id", "amount", "time_of_transaction"]
 
 module.exports = Donation;
