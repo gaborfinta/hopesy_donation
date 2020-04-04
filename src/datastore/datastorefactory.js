@@ -1,14 +1,14 @@
 const DonationsStoreLocal = require('./donation.array_local');
-const DonationsStoreFirebase = require('./donations.firestore');
+const DonationsStoreFirebase = require('./donation.firestore');
 
 function DataStoreFactory(env) {
     if (env === "local") {
         return {
-            "donationsStore": new DonationsStoreLocal(),
+            "donationStore": new DonationsStoreLocal(),
         }
-    } else if (env == "firebase") {
+    } else if (env === "firebase") {
         return {
-            "donationsStore": new DonationsStoreFirebase(),
+            "donationStore": new DonationsStoreFirebase(),
         }
     }
 }
