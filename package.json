@@ -5,7 +5,7 @@
   "main": "firebase_main.js",
   "scripts": {
     "start": "node local.js",
-    "test": "jest"
+    "test": "jest --passWithNoTests"
   },
   "repository": {
     "type": "git",
