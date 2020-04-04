@@ -1,7 +1,7 @@
 {
-  "name": "hopesy_cause",
+  "name": "hopesy_donation",
   "version": "1.0.0",
-  "description": "User service for the hopesy app",
+  "description": "Donation service for the hopesy app",
   "main": "firebase_main.js",
   "scripts": {
     "start": "node local.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gaborfinta/hopesy_cause.git"
+    "url": "git+https://github.com/gaborfinta/hopesy_donation.git"
   },
   "author": "corona_script",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/gaborfinta/hopesy_cause/issues"
+    "url": "https://github.com/gaborfinta/hopesy_donation/issues"
   },
-  "homepage": "https://github.com/gaborfinta/hopesy_cause#readme",
+  "homepage": "https://github.com/gaborfinta/hopesy_donation#readme",
   "dependencies": {
     "express": "^4.17.1",
     "jest": "^25.2.3",

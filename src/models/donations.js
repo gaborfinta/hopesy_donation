@@ -1,6 +1,6 @@
 class Donation {
     constructor(donationAttributes) {
-        User.keys.forEach(key => {
+        Donation.keys.forEach(key => {
             this[key] = null;
         });
 
