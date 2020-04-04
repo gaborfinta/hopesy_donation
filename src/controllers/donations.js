@@ -33,7 +33,7 @@ const patch = (datastore) => async (req, res) => {
     });
 
     const donationId = datastore.patch(donation);
-    res.json({userId: donationId});
+    res.json({donationId});
 }
 
 const addRoutes = (router, datastore) => {

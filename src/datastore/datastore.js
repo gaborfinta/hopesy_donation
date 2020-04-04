@@ -9,7 +9,7 @@ class DataStore {
         }
     }
 
-    save(user) {
+    save(donation) {
         throwNotImplementedError();
     }
 
@@ -21,7 +21,7 @@ class DataStore {
         throwNotImplementedError();
     }
 
-    patch(user) {
+    patch(donation) {
         throwNotImplementedError();
     }
 }
