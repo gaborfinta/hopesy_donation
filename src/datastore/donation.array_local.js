@@ -8,17 +8,17 @@ class DonationStoreLocal extends DataStore {
         this.donations = {};
     }
 
-    save(donation) {
+    async save(donation) {
         donation.id = this.donationCount++;
         this.donations[donation.id] = donation;
         return donation.id;
     }
 
-    getById(id) {
+    async getById(id) {
         return this.donations[id];
     }
 
-    getAll() {
+    async getAll() {
         let donationList = [];
         Object.keys(this.donations).forEach(id => {
             donationList.push(this.donations[id])

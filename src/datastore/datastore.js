@@ -9,15 +9,15 @@ class DataStore {
         }
     }
 
-    save(donation) {
+    async save(donation) {
         throwNotImplementedError();
     }
 
-    getById(id) {
+    async getById(id) {
         throwNotImplementedError();
     }
 
-    getAll() {
+    async getAll() {
         throwNotImplementedError();
     }
 }
