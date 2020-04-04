@@ -20,10 +20,6 @@ class DataStore {
     getAll() {
         throwNotImplementedError();
     }
-
-    patch(donation) {
-        throwNotImplementedError();
-    }
 }
 
 module.exports = DataStore;

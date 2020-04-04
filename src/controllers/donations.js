@@ -19,28 +19,10 @@ const save = (datastore) => async (req, res) => {
     res.json({newId});
 }
 
-const patch = (datastore) => async (req, res) => {
-    const { id } = req.params;
-    let donation = datastore.getById(id);
-    if (donation === undefined) {
-        // throw error
-    }
-    const donationAttributes = Donation.getKeys();
-    donationAttributes.forEach(attribute => {
-        if (req.body[attribute] !== undefined) {
-            donation[attribute] = req.body[attribute];
-        }
-    });
-
-    const donationId = datastore.patch(donation);
-    res.json({donationId});
-}
-
 const addRoutes = (router, datastore) => {
     router.get('/', getAll(datastore));
     router.post('/', save(datastore));
     router.get('/:id/', getById(datastore));
-    router.patch('/:id/', patch(datastore));
 }
 
 module.exports = addRoutes;

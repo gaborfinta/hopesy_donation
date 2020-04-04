@@ -44,12 +44,6 @@ class DonationStoreFirebase extends DataStore {
         return donationList;
 
     }
-
-    async patch(donation) {
-        const { id } = donation;
-        await admin.firestore().collection('donations').doc(id).set(donation.serialize());
-        return id;
-    }
 }
 
 module.exports = DonationStoreFirebase;

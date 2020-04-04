@@ -25,11 +25,6 @@ class DonationStoreLocal extends DataStore {
         });;
         return donationList;
     }
-
-    patch(donation) {
-        this.donations[donation.id] = donation;
-        return donation.id;
-    }
 }
 
 module.exports = DonationStoreLocal;
