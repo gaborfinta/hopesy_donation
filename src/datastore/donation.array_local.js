@@ -5,7 +5,6 @@ class DonationStoreLocal extends DataStore {
     constructor() {
         super();
         this.donationCount = 0;
-        dummyDonation = new Donation()
         this.donations = {};
     }
 
