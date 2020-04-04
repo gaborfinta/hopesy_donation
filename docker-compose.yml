@@ -1,7 +1,7 @@
 version: '3.3'
 
 services:
-  hopesy_cause:
+  hopesy_donation:
     build:
       context: ./
       dockerfile: Dockerfile
