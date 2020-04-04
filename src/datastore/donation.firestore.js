@@ -19,7 +19,7 @@ class DonationStoreFirebase extends DataStore {
             throw Error("Donation already exists in firestore");
         }
 
-        await admin.firestore().collection('donations').doc(id).set(donation);
+        await admin.firestore().collection('donations').doc(id).set(donation.serialize());
 
         return id;
     }
@@ -47,7 +47,7 @@ class DonationStoreFirebase extends DataStore {
 
     async patch(donation) {
         const { id } = donation;
-        await admin.firestore().collection('donations').doc(id).set(donation);
+        await admin.firestore().collection('donations').doc(id).set(donation.serialize());
         return id;
     }
 }

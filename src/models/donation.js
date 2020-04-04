@@ -15,6 +15,14 @@ class Donation {
         return Donation.keys;
     }
 
+    serialize() {
+        let u = {};
+        Donation.keys.forEach(key => {
+            u[key] = this[key];
+        });
+        return u;
+    }
+
     validate() {
         
     }
