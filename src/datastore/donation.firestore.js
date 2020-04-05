@@ -8,19 +8,9 @@ class DonationStoreFirebase extends DataStore {
     }
 
     async save(donation) {
-        const { id } = donation;
-        if (id === undefined) {
-            throw Error("Donation id not defined");
-        }
-
-        let donationReference = await admin.firestore().collection('donations').doc(id);
-        let donationRecord = await donationReference.get();
-        if (donationRecord.exists) {
-            throw Error("Donation already exists in firestore");
-        }
-
-        await admin.firestore().collection('donations').doc(id).set(donation.serialize());
-
+        let donationReference = await admin.firestore().collection('donations').add(donation.serialize());
+        const { id } = donationReference;
+        await donationReference.update({ id });
         return id;
     }
 
