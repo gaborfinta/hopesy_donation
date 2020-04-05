@@ -28,6 +28,6 @@ class Donation {
     }
 }
 
-Donation.keys = ["id", "cause_id", "sender", "receiver_id", "amount", "time_of_transaction"]
+Donation.keys = ["id", "cause_id", "sender", "receiver", "amount", "time_of_transaction"]
 
 module.exports = Donation;
